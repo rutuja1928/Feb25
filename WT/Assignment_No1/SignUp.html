@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title style="text-align:center">SignUp page</title>
+        <style>
+            .box{
+                width: 320px;
+                margin: auto;
+                padding:20px;
+                border: 2px solid;
+                border-radius: 8px;
+                background: #fafafa;
+                text-align: center;
+            }
+            .box label{
+                display: block; 
+                text-align: left;
+                margin-bottom: 3px;
+                font-weight: bold;
+
+            }
+            .box input[type=text],
+            .box input[type=email]{
+                width: 100%;                /* full width of the box */
+                padding: 8px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            .box input[type="button"]{
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 4px;
+                background: #765f8f;
+                color: white;
+                font-size: 1rem;
+
+            }
+            .box input[type="button"]:hover{
+                background: #5e4b6f;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+        <h2 style="text-align: center;">Sign Up</h2>
+        <form style="text-align: center;">
+            <label>First Name</label>
+            <input type="text" placeholder="First name">
+            <br><br>
+            <label>Last Name</label>
+            <input type="text" placeholder="Last name">
+            <br><br>
+            <label>Email</label>
+            <input type="email" placeholder="Email">
+            <br><br>
+            <div>
+            <span style="text-align:center">Already a member? <span><a href="http://127.0.0.1:5500/LoginPage.html">Log In</a></span></span>
+        </div>
+            <br><br>
+            <input type="button" value="Sign Up">
+        </form>
+    </div>
+    </body>
+</html>
