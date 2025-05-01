@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            console.log("Program started");
+            const myPromise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve({ data: "hello, friend", error: null });
+                }, 5000);
+            });
+
+            console.log(myPromise);
+            console.log("Program in progress");
+
+            // First promise chain
+            myPromise.then((val) => {
+                console.log(val);
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        resolve("First promise chain complete");
+                    }, 2000); // This delay was missing in your original return
+                });
+            })
+            .then((val) => {
+                console.log(val);
+            });
+
+            // Second promise chain
+            myPromise.then((val) => {
+                console.log(val);
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        resolve("Second promise chain completed");
+                    }, 10000); // Reduced for practical testing
+                });
+            })
+            .then((val) => {
+                console.log(val);
+            });
+        </script>
+    </body>
+</html>

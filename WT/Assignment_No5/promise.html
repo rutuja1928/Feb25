@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Promise</title>
+    </head>
+    <body>
+        <script>
+            console.log("program strated")
+            const myPromise=new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve();
+                },3000)
+            })
+            console.log(myPromise)
+            console.log("Program in Progress")
+
+            myPromise.then((value)=>{
+                console.log("program completed")
+            })
+        </script>
+    </body>
+</html>
