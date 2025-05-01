@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <script>
+            function processData(inputstring,callback){
+                const result=callback(inputstring)
+                console.log(result)
+            }
+            function toUppercases(str){
+                return str.toUpperCase()
+            }
+            processData("hello Javascript",toUppercases)
+        </script>
+    </body>
+</html>
